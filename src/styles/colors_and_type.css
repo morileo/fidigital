@@ -1,0 +1,216 @@
+/*
+ * Fi Digital – Design System Foundations
+ * colors_and_type.css
+ *
+ * Usage: importado em src/layouts/Layout.astro.
+ * Fontes em public/fonts/.
+ */
+
+/* ─── FONT FACE DECLARATIONS ─────────────────────────────────────────── */
+@font-face { font-family: 'Sofia Pro'; src: url('/fonts/Sofia-Pro-UltraLight-Az.otf'); font-weight: 200; font-style: normal; }
+@font-face { font-family: 'Sofia Pro'; src: url('/fonts/Sofia-Pro-UltraLight-Italic-Az.otf'); font-weight: 200; font-style: italic; }
+@font-face { font-family: 'Sofia Pro'; src: url('/fonts/Sofia-Pro-ExtraLight-Az.otf'); font-weight: 275; font-style: normal; }
+@font-face { font-family: 'Sofia Pro'; src: url('/fonts/Sofia-Pro-ExtraLight-Italic-Az.otf'); font-weight: 275; font-style: italic; }
+@font-face { font-family: 'Sofia Pro'; src: url('/fonts/Sofia-Pro-Light-Az.otf'); font-weight: 300; font-style: normal; }
+@font-face { font-family: 'Sofia Pro'; src: url('/fonts/Sofia-Pro-Light-Italic-Az.otf'); font-weight: 300; font-style: italic; }
+@font-face { font-family: 'Sofia Pro'; src: url('/fonts/Sofia-Pro-Regular-Az.otf'); font-weight: 400; font-style: normal; }
+@font-face { font-family: 'Sofia Pro'; src: url('/fonts/Sofia-Pro-Regular-Italic-Az.otf'); font-weight: 400; font-style: italic; }
+@font-face { font-family: 'Sofia Pro'; src: url('/fonts/Sofia-Pro-Medium-Az.otf'); font-weight: 500; font-style: normal; }
+@font-face { font-family: 'Sofia Pro'; src: url('/fonts/Sofia-Pro-Medium-Italic-Az.otf'); font-weight: 500; font-style: italic; }
+@font-face { font-family: 'Sofia Pro'; src: url('/fonts/Sofia-Pro-Semi-Bold-Az.otf'); font-weight: 600; font-style: normal; }
+@font-face { font-family: 'Sofia Pro'; src: url('/fonts/Sofia-Pro-Semi-Bold-Italic-Az.otf'); font-weight: 600; font-style: italic; }
+@font-face { font-family: 'Sofia Pro'; src: url('/fonts/Sofia-Pro-Bold-Az.otf'); font-weight: 700; font-style: normal; }
+@font-face { font-family: 'Sofia Pro'; src: url('/fonts/Sofia-Pro-Bold-Italic-Az.otf'); font-weight: 700; font-style: italic; }
+@font-face { font-family: 'Sofia Pro'; src: url('/fonts/Sofia-Pro-Black-Az.otf'); font-weight: 900; font-style: normal; }
+@font-face { font-family: 'Sofia Pro'; src: url('/fonts/Sofia-Pro-Black-Italic-Az.otf'); font-weight: 900; font-style: italic; }
+
+/* ─── BASE COLOR TOKENS ─────────────────────────────────────────────── */
+:root {
+  /* Brand Navy – extracted from FIDigital_Logo_Fundo_Azul */
+  --navy-900: #112233;
+  --navy-800: #162d42;
+  --navy-700: #1d3e58;   /* primary brand navy */
+  --navy-600: #254e6d;
+  --navy-500: #2e6089;
+  --navy-400: #5589aa;
+  --navy-300: #82aec5;
+  --navy-200: #b0cdd9;
+  --navy-100: #d8e8ef;
+  --navy-50:  #eef5f8;
+
+  /* White / Neutral */
+  --white:    #ffffff;
+  --grey-50:  #f7f9fb;
+  --grey-100: #edf1f5;
+  --grey-200: #d6dfe7;
+  --grey-300: #b0bec9;
+  --grey-400: #8398a8;
+  --grey-500: #5c7082;
+  --grey-600: #3e5264;
+  --grey-700: #2c3d4d;
+  --grey-900: #111820;
+
+  /* Accent – warm gold, used sparingly for CTA highlights */
+  --gold-400: #c8a96e;
+  --gold-300: #dbbe8f;
+  --gold-200: #edd9b5;
+
+  /* ─── SEMANTIC COLOR TOKENS ─── */
+  --color-brand-primary:   var(--navy-700);
+  --color-brand-dark:      var(--navy-900);
+  --color-brand-mid:       var(--navy-600);
+  --color-accent:          var(--gold-400);
+
+  --color-bg-dark:         var(--navy-700);
+  --color-bg-light:        var(--white);
+  --color-bg-subtle:       var(--grey-50);
+
+  --color-fg-on-dark:      var(--white);
+  --color-fg-on-light:     var(--navy-800);
+  --color-fg-muted:        var(--grey-500);
+
+  --color-border:          var(--grey-200);
+  --color-divider:         var(--navy-600);
+
+  /* ─── TYPOGRAPHY TOKENS ─── */
+  --font-sans: 'Sofia Pro', system-ui, sans-serif;
+
+  /* Scale */
+  --text-xs:   0.75rem;   /* 12px */
+  --text-sm:   0.875rem;  /* 14px */
+  --text-base: 1rem;      /* 16px */
+  --text-lg:   1.125rem;  /* 18px */
+  --text-xl:   1.375rem;  /* 22px */
+  --text-2xl:  1.75rem;   /* 28px */
+  --text-3xl:  2.25rem;   /* 36px */
+  --text-4xl:  3rem;      /* 48px */
+  --text-5xl:  4rem;      /* 64px */
+  --text-6xl:  5.5rem;    /* 88px */
+
+  /* Line heights */
+  --leading-tight:  1.1;
+  --leading-snug:   1.3;
+  --leading-normal: 1.5;
+  --leading-relaxed:1.7;
+
+  /* Letter spacing */
+  --tracking-wide:  0.08em;
+  --tracking-wider: 0.14em;
+
+  /* ─── SPACING TOKENS ─── */
+  --space-1:  4px;
+  --space-2:  8px;
+  --space-3:  12px;
+  --space-4:  16px;
+  --space-5:  24px;
+  --space-6:  32px;
+  --space-7:  48px;
+  --space-8:  64px;
+  --space-9:  96px;
+  --space-10: 128px;
+
+  /* ─── BORDER RADIUS ─── */
+  --radius-sm:   4px;
+  --radius-md:   8px;
+  --radius-lg:   16px;
+  --radius-full: 9999px;
+
+  /* ─── SHADOW / ELEVATION ─── */
+  --shadow-sm:  0 1px 3px rgba(17,34,51,0.12);
+  --shadow-md:  0 4px 16px rgba(17,34,51,0.15);
+  --shadow-lg:  0 8px 32px rgba(17,34,51,0.20);
+  --shadow-xl:  0 16px 56px rgba(17,34,51,0.28);
+}
+
+/* ─── SEMANTIC ELEMENT STYLES ───────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; }
+
+body {
+  font-family: var(--font-sans);
+  font-weight: 400;
+  font-size: var(--text-base);
+  line-height: var(--leading-normal);
+  color: var(--color-fg-on-light);
+  background: var(--color-bg-light);
+  -webkit-font-smoothing: antialiased;
+  text-wrap: pretty;
+}
+
+h1 {
+  font-size: var(--text-5xl);
+  font-weight: 900;
+  line-height: var(--leading-tight);
+  letter-spacing: -0.01em;
+  color: var(--color-brand-primary);
+}
+
+h2 {
+  font-size: var(--text-4xl);
+  font-weight: 700;
+  line-height: var(--leading-tight);
+  color: var(--color-brand-primary);
+}
+
+h3 {
+  font-size: var(--text-3xl);
+  font-weight: 600;
+  line-height: var(--leading-snug);
+  color: var(--color-brand-primary);
+}
+
+h4 {
+  font-size: var(--text-2xl);
+  font-weight: 600;
+  line-height: var(--leading-snug);
+}
+
+h5 {
+  font-size: var(--text-xl);
+  font-weight: 500;
+}
+
+h6 {
+  font-size: var(--text-lg);
+  font-weight: 500;
+  letter-spacing: var(--tracking-wide);
+  text-transform: uppercase;
+  color: var(--color-fg-muted);
+}
+
+p {
+  font-size: var(--text-base);
+  font-weight: 400;
+  line-height: var(--leading-relaxed);
+  color: var(--color-fg-on-light);
+}
+
+.lead {
+  font-size: var(--text-xl);
+  font-weight: 300;
+  line-height: var(--leading-relaxed);
+}
+
+.caption {
+  font-size: var(--text-sm);
+  font-weight: 400;
+  color: var(--color-fg-muted);
+  letter-spacing: var(--tracking-wide);
+}
+
+.label {
+  font-size: var(--text-xs);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-wider);
+  color: var(--color-fg-muted);
+}
+
+/* Logo wordmark helper classes */
+.wordmark-fi {
+  font-weight: 900;
+  color: var(--color-brand-primary);
+}
+.wordmark-digital {
+  font-weight: 300;
+  color: var(--color-brand-primary);
+}

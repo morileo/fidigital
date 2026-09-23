@@ -1,0 +1,532 @@
+---
+import Layout from '../layouts/Layout.astro';
+import ImageSlot from '../components/ImageSlot.astro';
+import { Image } from 'astro:assets';
+import fotoSobre from '../assets/filipe-ramalho-sobre.jpg';
+import fotoOferta from '../assets/filipe-ramalho-oferta.jpg';
+
+// Configurações da oferta (antes eram "props" editáveis no editor visual)
+const checkoutUrl = 'https://hotmart.com/pt-br';
+const spotsLeft = 37;
+const showSticky = true;       // barra fixa de compra no mobile
+const showProvaSocial = true;  // seção de prints de feedback
+---
+
+<Layout title="Cliente Todo Dia | Mais Fluxo, Mais Caixa">
+  <div style="font-family:'Sofia Pro',system-ui,sans-serif;background:#ffffff;color:#162d42;overflow-x:hidden">
+
+    <header style="position:sticky;top:0;z-index:40;background:#112233;border-bottom:1px solid rgba(255,255,255,0.1)">
+      <div style="max-width:1180px;margin:0 auto;padding:14px 24px;display:flex;align-items:center;justify-content:space-between;gap:24px">
+        <a href="#top" style="display:flex;align-items:baseline;gap:7px;color:#ffffff;font-size:20px;letter-spacing:-0.01em">
+          <span style="font-weight:900">FI</span><span style="font-weight:300">Digital</span>
+        </a>
+        <div style="display:flex;align-items:center;gap:20px">
+          <a href="#metodo" style="color:rgba(255,255,255,0.75);font-size:14px;font-weight:500;display:none">Método</a>
+          <a class="hover-gold" href={checkoutUrl} style="background:#c8a96e;color:#112233;font-weight:700;font-size:14px;padding:11px 22px;border-radius:9999px;white-space:nowrap">Acessar por R$ 39,90</a>
+        </div>
+      </div>
+    </header>
+
+    <section id="top" style="background:#112233;padding:72px 24px 80px">
+      <div id="hero" style="max-width:1180px;margin:0 auto">
+
+        <p style="grid-area:kicker;margin:0 0 20px;font-size:12px;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:#82aec5">Cliente Todo Dia | Mais Fluxo, Mais Caixa</p>
+
+        <h1 style="grid-area:title;margin:0;font-size:clamp(38px,5.2vw,64px);font-weight:900;line-height:1.05;letter-spacing:-0.02em;color:#ffffff">Gere demanda <em style="font-style:italic;font-weight:900;color:#c8a96e">constante</em> para seu negócio local</h1>
+
+        <p style="grid-area:body;margin:22px 0 0;font-size:17px;line-height:1.7;color:rgba(255,255,255,0.8);max-width:52ch">Um manual prático para empresários que querem transformar visibilidade em clientes reais, todos os dias, mesmo em cidades pequenas e sem virar refém de redes sociais.</p>
+
+        <div style="grid-area:price;margin-top:32px;display:flex;align-items:baseline;flex-wrap:wrap;gap:12px">
+          <span style="font-size:17px;color:#82aec5;text-decoration:line-through">De R$ 199,90</span>
+          <span style="font-size:15px;color:#82aec5">por</span>
+          <span style="font-size:clamp(40px,5vw,54px);font-weight:900;line-height:1;color:#ffffff">R$ 39,90</span>
+          <span style="font-size:15px;color:#82aec5">pagamento único</span>
+        </div>
+
+        <div style="grid-area:cta;margin-top:26px;display:flex;flex-direction:column;align-items:flex-start;gap:14px">
+          <a class="hover-gold press" href={checkoutUrl} style="background:#c8a96e;color:#112233;font-size:18px;font-weight:700;padding:19px 34px;border-radius:9999px;box-shadow:0 8px 32px rgba(200,169,110,0.28);display:inline-flex;align-items:center;gap:10px">Quero acessar o método Cliente Todo Dia <span style="font-weight:400">→</span></a>
+          <p style="margin:0;font-size:14px;font-weight:600;color:#c8a96e">Lote promocional: restam {spotsLeft} acessos por R$ 39,90</p>
+        </div>
+
+        <div style="grid-area:trust;margin-top:26px">
+          <p style="margin:0;font-size:13px;letter-spacing:0.08em;color:rgba(255,255,255,0.55)">Acesso vitalício · Garantia de 7 dias</p>
+        </div>
+
+        <div id="hero-media" style="grid-area:media;align-self:center;position:relative">
+          <div style="position:relative;border-radius:16px;overflow:hidden;background:#162d42;box-shadow:0 16px 56px rgba(17,34,51,0.45);aspect-ratio:4/5;color:#ffffff">
+            <ImageSlot id="ctd-hero-local" shape="rect" fit="cover" style="width:100%;height:100%;color:#ffffff" placeholder="Foto de negócio local com fluxo de clientes (loja, barbearia, clínica, restaurante cheio)" />
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section style="background:#f7f9fb;padding:88px 24px">
+      <div style="max-width:1000px;margin:0 auto">
+        <h2 style="margin:0;font-size:clamp(30px,3.6vw,46px);font-weight:700;line-height:1.1;color:#1d3e58;max-width:24ch">Se você passa por isso, o problema não é esforço</h2>
+        <p style="margin:20px 0 0;font-size:17px;line-height:1.7;color:#3e5264;max-width:60ch">A maioria dos negócios locais trabalha muito e ainda assim vive de meses bons e meses ruins.<br>Não falta dedicação. Falta método.</p>
+
+        <div style="margin-top:48px;display:flex;flex-direction:column;gap:14px">
+
+          <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:0;background:#ffffff;border:1px solid #d6dfe7;border-radius:8px;overflow:hidden;box-shadow:0 1px 3px rgba(17,34,51,0.06)">
+            <div style="padding:26px 28px;background:#ffffff">
+              <p style="margin:0 0 8px;font-size:11px;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:#8398a8">Antes do método</p>
+              <p style="margin:0;font-size:17px;line-height:1.55;color:#5c7082">O movimento depende de quem lembra de te indicar.</p>
+            </div>
+            <div style="padding:26px 28px;background:#eef5f8;border-left:1px solid #d6dfe7">
+              <p style="margin:0 0 8px;font-size:11px;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:#254e6d">Depois do método</p>
+              <p style="margin:0;font-size:17px;font-weight:600;line-height:1.55;color:#1d3e58">Clientes entrando todos os dias, sem depender só de indicação.</p>
+            </div>
+          </div>
+
+          <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:0;background:#ffffff;border:1px solid #d6dfe7;border-radius:8px;overflow:hidden;box-shadow:0 1px 3px rgba(17,34,51,0.06)">
+            <div style="padding:26px 28px;background:#ffffff">
+              <p style="margin:0 0 8px;font-size:11px;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:#8398a8">Antes do método</p>
+              <p style="margin:0;font-size:17px;line-height:1.55;color:#5c7082">Você posta todo dia no Instagram e não entra venda nenhuma.</p>
+            </div>
+            <div style="padding:26px 28px;background:#eef5f8;border-left:1px solid #d6dfe7">
+              <p style="margin:0 0 8px;font-size:11px;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:#254e6d">Depois do método</p>
+              <p style="margin:0;font-size:17px;font-weight:600;line-height:1.55;color:#1d3e58">Parar de gastar energia em Instagram que não gera venda.</p>
+            </div>
+          </div>
+
+          <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:0;background:#ffffff;border:1px solid #d6dfe7;border-radius:8px;overflow:hidden;box-shadow:0 1px 3px rgba(17,34,51,0.06)">
+            <div style="padding:26px 28px;background:#ffffff">
+              <p style="margin:0 0 8px;font-size:11px;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:#8398a8">Antes do método</p>
+              <p style="margin:0;font-size:17px;line-height:1.55;color:#5c7082">O marketing só anda quando você para tudo para cuidar dele.</p>
+            </div>
+            <div style="padding:26px 28px;background:#eef5f8;border-left:1px solid #d6dfe7">
+              <p style="margin:0 0 8px;font-size:11px;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:#254e6d">Depois do método</p>
+              <p style="margin:0;font-size:17px;font-weight:600;line-height:1.55;color:#1d3e58">Organizar o marketing para funcionar mesmo sem tempo.</p>
+            </div>
+          </div>
+
+          <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:0;background:#ffffff;border:1px solid #d6dfe7;border-radius:8px;overflow:hidden;box-shadow:0 1px 3px rgba(17,34,51,0.06)">
+            <div style="padding:26px 28px;background:#ffffff">
+              <p style="margin:0 0 8px;font-size:11px;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:#8398a8">Antes do método</p>
+              <p style="margin:0;font-size:17px;line-height:1.55;color:#5c7082">Você fecha o mês sem saber se o próximo paga as contas.</p>
+            </div>
+            <div style="padding:26px 28px;background:#eef5f8;border-left:1px solid #d6dfe7">
+              <p style="margin:0 0 8px;font-size:11px;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:#254e6d">Depois do método</p>
+              <p style="margin:0;font-size:17px;font-weight:600;line-height:1.55;color:#1d3e58">Criar previsibilidade de faturamento mês após mês.</p>
+            </div>
+          </div>
+
+          <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:0;background:#ffffff;border:1px solid #d6dfe7;border-radius:8px;overflow:hidden;box-shadow:0 1px 3px rgba(17,34,51,0.06)">
+            <div style="padding:26px 28px;background:#ffffff">
+              <p style="margin:0 0 8px;font-size:11px;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:#8398a8">Antes do método</p>
+              <p style="margin:0;font-size:17px;line-height:1.55;color:#5c7082">Quem procura o seu serviço no bairro encontra o concorrente.</p>
+            </div>
+            <div style="padding:26px 28px;background:#eef5f8;border-left:1px solid #d6dfe7">
+              <p style="margin:0 0 8px;font-size:11px;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:#254e6d">Depois do método</p>
+              <p style="margin:0;font-size:17px;font-weight:600;line-height:1.55;color:#1d3e58">Ser lembrado como referência no seu bairro ou cidade.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    {showProvaSocial && (<Fragment>
+    <section style="background:#ffffff;padding:88px 24px">
+      <div style="max-width:1100px;margin:0 auto">
+        <h2 style="margin:0;font-size:clamp(30px,3.6vw,46px);font-weight:700;line-height:1.1;color:#1d3e58;max-width:22ch">Quem aplicou, mandou mensagem</h2>
+        <p style="margin:20px 0 0;font-size:17px;line-height:1.7;color:#3e5264;max-width:58ch">Feedbacks reais de empresários que colocaram o método em prática no próprio negócio.</p>
+
+        <div style="margin-top:44px;display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:24px">
+          <div style="background:#f7f9fb;border:1px solid #d6dfe7;border-radius:8px;padding:16px;box-shadow:0 4px 16px rgba(17,34,51,0.08)">
+            <ImageSlot id="ctd-print-1" shape="rounded" radius="6" fit="contain" style="width:100%;height:420px" placeholder="Print do WhatsApp — feedback 1" />
+          </div>
+          <div style="background:#f7f9fb;border:1px solid #d6dfe7;border-radius:8px;padding:16px;box-shadow:0 4px 16px rgba(17,34,51,0.08)">
+            <ImageSlot id="ctd-print-2" shape="rounded" radius="6" fit="contain" style="width:100%;height:420px" placeholder="Print do WhatsApp — feedback 2" />
+          </div>
+          <div style="background:#f7f9fb;border:1px solid #d6dfe7;border-radius:8px;padding:16px;box-shadow:0 4px 16px rgba(17,34,51,0.08)">
+            <ImageSlot id="ctd-print-3" shape="rounded" radius="6" fit="contain" style="width:100%;height:420px" placeholder="Print do WhatsApp — feedback 3" />
+          </div>
+        </div>
+      </div>
+    </section>
+    </Fragment>)}
+
+    <section id="metodo" style="background:#1d3e58;padding:92px 24px;position:relative;overflow:hidden">
+      <div style="max-width:1100px;margin:0 auto;position:relative">
+        <div style="display:flex;align-items:center;gap:40px">
+          <div style="min-width:0;flex:1 1 auto">
+            <p style="margin:0 0 14px;font-size:12px;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:#82aec5">O tabuleiro estratégico</p>
+            <h2 style="margin:0;font-size:clamp(30px,3.6vw,46px);font-weight:700;line-height:1.1;color:#ffffff;max-width:22ch">Como o método funciona na prática</h2>
+            <p style="margin:22px 0 0;font-size:18px;line-height:1.7;color:rgba(255,255,255,0.82);max-width:62ch">O Cliente Todo Dia não é sobre fazer mais coisas. É sobre fazer as coisas certas, na ordem correta. O método funciona como um tabuleiro estratégico, dividido em 3 movimentos claros.</p>
+          </div>
+          <div id="xadrez" style="flex:0 0 240px;width:240px;height:300px">
+            <ImageSlot id="ctd-xadrez" shape="rounded" radius="8" fit="contain" style="width:100%;height:100%;color:#ffffff" placeholder="Imagem de peças de xadrez (PNG com fundo transparente)" />
+          </div>
+        </div>
+
+        <div style="margin-top:52px;display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px">
+
+          <div style="background:#ffffff;border-radius:8px;padding:32px 28px;box-shadow:0 8px 32px rgba(17,34,51,0.28);display:flex;flex-direction:column;gap:16px">
+            <span style="font-size:13px;font-weight:900;letter-spacing:0.14em;color:#c8a96e">01</span>
+            <h3 style="margin:0;font-size:26px;font-weight:700;line-height:1.2;color:#1d3e58">Abrindo o Tabuleiro</h3>
+            <p style="margin:0;font-size:15px;line-height:1.6;color:#5c7082">Você organiza o básico bem feito:</p>
+            <ul style="margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:10px">
+              <li style="font-size:15px;line-height:1.5;color:#2c3d4d;padding-left:18px;position:relative"><span style="position:absolute;left:0;color:#c8a96e">·</span>Posicionamento local claro.</li>
+              <li style="font-size:15px;line-height:1.5;color:#2c3d4d;padding-left:18px;position:relative"><span style="position:absolute;left:0;color:#c8a96e">·</span>Google Meu Negócio estruturado para aparecer no mapa.</li>
+              <li style="font-size:15px;line-height:1.5;color:#2c3d4d;padding-left:18px;position:relative"><span style="position:absolute;left:0;color:#c8a96e">·</span>Instagram funcional, não só estético.</li>
+              <li style="font-size:15px;line-height:1.5;color:#2c3d4d;padding-left:18px;position:relative"><span style="position:absolute;left:0;color:#c8a96e">·</span>WhatsApp como centro de conversão.</li>
+              <li style="font-size:15px;line-height:1.5;color:#2c3d4d;padding-left:18px;position:relative"><span style="position:absolute;left:0;color:#c8a96e">·</span>Oferta local simples e clara.</li>
+            </ul>
+            <p style="margin:auto 0 0;padding-top:16px;border-top:1px solid #d6dfe7;font-size:15px;font-weight:600;line-height:1.5;color:#1d3e58">Aqui você para de perder clientes por desorganização.</p>
+          </div>
+
+          <div style="background:#ffffff;border-radius:8px;padding:32px 28px;box-shadow:0 8px 32px rgba(17,34,51,0.28);display:flex;flex-direction:column;gap:16px">
+            <span style="font-size:13px;font-weight:900;letter-spacing:0.14em;color:#c8a96e">02</span>
+            <h3 style="margin:0;font-size:26px;font-weight:700;line-height:1.2;color:#1d3e58">Dominando o Tabuleiro</h3>
+            <p style="margin:0;font-size:15px;line-height:1.6;color:#5c7082">Você passa a aparecer para quem já está procurando:</p>
+            <ul style="margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:10px">
+              <li style="font-size:15px;line-height:1.5;color:#2c3d4d;padding-left:18px;position:relative"><span style="position:absolute;left:0;color:#c8a96e">·</span>Google Meu Negócio como principal ativo.</li>
+              <li style="font-size:15px;line-height:1.5;color:#2c3d4d;padding-left:18px;position:relative"><span style="position:absolute;left:0;color:#c8a96e">·</span>Conteúdos locais simples, executáveis pela equipe.</li>
+              <li style="font-size:15px;line-height:1.5;color:#2c3d4d;padding-left:18px;position:relative"><span style="position:absolute;left:0;color:#c8a96e">·</span>Parcerias locais estratégicas.</li>
+              <li style="font-size:15px;line-height:1.5;color:#2c3d4d;padding-left:18px;position:relative"><span style="position:absolute;left:0;color:#c8a96e">·</span>Sistema previsível de indicações.</li>
+            </ul>
+            <p style="margin:auto 0 0;padding-top:16px;border-top:1px solid #d6dfe7;font-size:15px;font-weight:600;line-height:1.5;color:#1d3e58">Aqui você vira referência local, não opção genérica.</p>
+          </div>
+
+          <div style="background:#ffffff;border-radius:8px;padding:32px 28px;box-shadow:0 8px 32px rgba(17,34,51,0.28);display:flex;flex-direction:column;gap:16px">
+            <span style="font-size:13px;font-weight:900;letter-spacing:0.14em;color:#c8a96e">03</span>
+            <h3 style="margin:0;font-size:26px;font-weight:700;line-height:1.2;color:#1d3e58">Movimentos de Ataque</h3>
+            <p style="margin:0;font-size:15px;line-height:1.6;color:#5c7082">Você cria controle e previsibilidade:</p>
+            <ul style="margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:10px">
+              <li style="font-size:15px;line-height:1.5;color:#2c3d4d;padding-left:18px;position:relative"><span style="position:absolute;left:0;color:#c8a96e">·</span>Tráfego pago local simplificado.</li>
+              <li style="font-size:15px;line-height:1.5;color:#2c3d4d;padding-left:18px;position:relative"><span style="position:absolute;left:0;color:#c8a96e">·</span>Campanhas de demanda imediata.</li>
+              <li style="font-size:15px;line-height:1.5;color:#2c3d4d;padding-left:18px;position:relative"><span style="position:absolute;left:0;color:#c8a96e">·</span>Direcionamento direto para o WhatsApp.</li>
+              <li style="font-size:15px;line-height:1.5;color:#2c3d4d;padding-left:18px;position:relative"><span style="position:absolute;left:0;color:#c8a96e">·</span>Ajustes para manter fluxo constante.</li>
+            </ul>
+            <p style="margin:auto 0 0;padding-top:16px;border-top:1px solid #d6dfe7;font-size:15px;font-weight:600;line-height:1.5;color:#1d3e58">O dono pensa e decide. A operação roda.</p>
+          </div>
+
+        </div>
+
+        <div style="margin-top:44px">
+          <a class="hover-gold press" href={checkoutUrl} style="background:#c8a96e;color:#112233;font-size:17px;font-weight:700;padding:18px 32px;border-radius:9999px;display:inline-flex;align-items:center;gap:10px">Quero acessar o método Cliente Todo Dia <span style="font-weight:400">→</span></a>
+        </div>
+      </div>
+    </section>
+
+    <section style="background:#f7f9fb;padding:88px 24px">
+      <div style="max-width:1000px;margin:0 auto">
+        <p style="margin:0 0 14px;font-size:12px;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:#5c7082">Pra quem é o método</p>
+
+        <div style="margin-top:28px;display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px">
+          <div style="background:#ffffff;border:1px solid #d6dfe7;border-radius:8px;padding:32px 28px;box-shadow:0 4px 16px rgba(17,34,51,0.1)">
+            <h3 style="margin:0 0 22px;font-size:22px;font-weight:700;color:#1d3e58">É para você que</h3>
+            <ul style="margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:14px">
+              <li style="display:flex;gap:12px;font-size:16px;line-height:1.5;color:#2c3d4d"><span style="color:#254e6d;font-weight:700;flex:none">✓</span>Tem um negócio físico.</li>
+              <li style="display:flex;gap:12px;font-size:16px;line-height:1.5;color:#2c3d4d"><span style="color:#254e6d;font-weight:700;flex:none">✓</span>Já validou seu serviço, mas sofre com agenda instável.</li>
+              <li style="display:flex;gap:12px;font-size:16px;line-height:1.5;color:#2c3d4d"><span style="color:#254e6d;font-weight:700;flex:none">✓</span>Vive refém de sazonalidade e “meses bons e ruins”.</li>
+              <li style="display:flex;gap:12px;font-size:16px;line-height:1.5;color:#2c3d4d"><span style="color:#254e6d;font-weight:700;flex:none">✓</span>Já tentou marketing antes e se frustrou.</li>
+              <li style="display:flex;gap:12px;font-size:16px;line-height:1.5;color:#2c3d4d"><span style="color:#254e6d;font-weight:700;flex:none">✓</span>Não quer hype, dancinha ou promessa milagrosa.</li>
+              <li style="display:flex;gap:12px;font-size:16px;line-height:1.5;color:#2c3d4d"><span style="color:#254e6d;font-weight:700;flex:none">✓</span>Quer previsibilidade, processo e segurança.</li>
+            </ul>
+          </div>
+          <div style="background:#edf1f5;border:1px solid #d6dfe7;border-radius:8px;padding:32px 28px">
+            <h3 style="margin:0 0 22px;font-size:22px;font-weight:700;color:#3e5264">Não é para quem</h3>
+            <ul style="margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:14px">
+              <li style="display:flex;gap:12px;font-size:16px;line-height:1.5;color:#5c7082"><span style="color:#8398a8;font-weight:700;flex:none">×</span>Busca viralizar.</li>
+              <li style="display:flex;gap:12px;font-size:16px;line-height:1.5;color:#5c7082"><span style="color:#8398a8;font-weight:700;flex:none">×</span>Quer terceirizar tudo e não olhar para o próprio negócio.</li>
+              <li style="display:flex;gap:12px;font-size:16px;line-height:1.5;color:#5c7082"><span style="color:#8398a8;font-weight:700;flex:none">×</span>Espera resultado sem colocar o básico em prática.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section style="background:#ffffff;padding:88px 24px">
+      <div style="max-width:1100px;margin:0 auto">
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:56px;align-items:start">
+        <div style="border-radius:16px;overflow:hidden;background:#f7f9fb;box-shadow:0 8px 32px rgba(17,34,51,0.16)">
+          <Image src={fotoSobre} widths={[480, 800, 1200]} sizes="(max-width: 900px) 100vw, 540px" alt="Filipe Ramalho, fundador da Agência Fi Digital" style="display:block;width:100%;height:auto;aspect-ratio:4/5;object-fit:cover;object-position:50% 15%" />
+        </div>
+        <div>
+          <p style="margin:0 0 14px;font-size:12px;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:#5c7082">Quem está por trás do método</p>
+          <p style="margin:24px 0 0;font-size:17px;line-height:1.7;color:#2c3d4d"><strong style="font-weight:700">Filipe Ramalho</strong>, fundador da Agência Fi Digital. Há mais de 5 anos atuando com marketing digital e mídia de performance, trabalhando com empresas de diferentes tamanhos, de investimentos altos a orçamentos reduzidos, ficou claro um padrão:</p>
+          <blockquote style="margin:26px 0 0;padding:20px 24px;border-left:3px solid #c8a96e;background:#f7f9fb;font-size:18px;font-weight:600;line-height:1.55;color:#1d3e58">O pequeno e médio empresário não precisa de mais ferramentas. Precisa de previsibilidade e posicionamento correto.</blockquote>
+          <p style="margin:26px 0 0;font-size:17px;line-height:1.7;color:#2c3d4d">Após ver inúmeros empresários frustrados com agências e promessas vazias, este material foi criado para ensinar o básico bem feito, o feijão com arroz que realmente gera demanda local.</p>
+          <p style="margin:18px 0 0;font-size:17px;line-height:1.7;color:#2c3d4d">O diferencial está na visão integrada, enquanto outras soluções focam em ações isoladas como só tráfego, só Instagram ou só produção de conteúdo. <strong style="font-weight:700">Aqui, tudo conversa com tudo.</strong></p>
+
+        </div>
+      </div>
+
+      <div style="margin-top:56px;display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:28px;padding:32px 0;border-top:1px solid #d6dfe7;border-bottom:1px solid #d6dfe7;text-align:center">
+        <div><p style="margin:0;font-size:36px;font-weight:900;line-height:1;color:#1d3e58">+30</p><p style="margin:8px 0 0;font-size:14px;color:#5c7082">empresas atendidas</p></div>
+        <div><p style="margin:0;font-size:36px;font-weight:900;line-height:1;color:#1d3e58">+R$ 15 mi</p><p style="margin:8px 0 0;font-size:14px;color:#5c7082">gerenciados em mídia</p></div>
+        <div><p style="margin:0;font-size:36px;font-weight:900;line-height:1;color:#1d3e58">5 anos</p><p style="margin:8px 0 0;font-size:14px;color:#5c7082">de mercado</p></div>
+      </div>
+
+      <p style="margin:32px 0 16px;font-size:11px;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:#8398a8;text-align:center">Marcas já atendidas</p>
+      <div style="display:flex;flex-wrap:wrap;gap:12px;align-items:center;justify-content:center">
+        <span style="border:1px solid #d6dfe7;border-radius:6px;padding:12px 24px;font-size:16px;font-weight:700;letter-spacing:0.04em;color:#3e5264">CNA</span>
+        <span style="border:1px solid #d6dfe7;border-radius:6px;padding:12px 24px;font-size:16px;font-weight:700;letter-spacing:0.04em;color:#3e5264">MMartan</span>
+        <span style="border:1px dashed #b0bec9;border-radius:6px;padding:12px 24px;font-size:14px;font-weight:500;color:#8398a8">+ marcas a incluir</span>
+      </div>
+      </div>
+    </section>
+
+    <section style="background:#112233;padding:88px 24px">
+      <div style="max-width:1100px;margin:0 auto">
+        <p style="margin:0 0 14px;font-size:12px;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:#82aec5">Bônus inclusos</p>
+        <h2 style="margin:0;font-size:clamp(30px,3.6vw,46px);font-weight:700;line-height:1.1;color:#ffffff;max-width:24ch">Ferramentas para acelerar a execução</h2>
+        <p style="margin:20px 0 0;font-size:17px;line-height:1.7;color:rgba(255,255,255,0.78);max-width:52ch">Tudo focado em execução simples, não teoria.</p>
+
+        <div style="margin-top:44px;display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px">
+
+          <div style="background:#162d42;border:1px solid rgba(255,255,255,0.12);border-radius:8px;overflow:hidden;display:flex;flex-direction:column">
+            <ImageSlot id="ctd-bonus-1" shape="rect" style="width:100%;height:160px;color:#ffffff" placeholder="Mockup: 15 ideias de Reels" />
+            <div style="padding:22px 24px;display:flex;flex-direction:column;gap:8px">
+              <span style="font-size:12px;font-weight:900;letter-spacing:0.14em;color:#c8a96e">BÔNUS 01</span>
+              <h3 style="margin:0;font-size:19px;font-weight:600;line-height:1.3;color:#ffffff">15 ideias de Reels locais</h3>
+              <p style="margin:0;font-size:14px;line-height:1.6;color:rgba(255,255,255,0.66)">Roteiros prontos para gravar com o celular, sem produção.</p>
+            </div>
+          </div>
+
+          <div style="background:#162d42;border:1px solid rgba(255,255,255,0.12);border-radius:8px;overflow:hidden;display:flex;flex-direction:column">
+            <ImageSlot id="ctd-bonus-2" shape="rect" style="width:100%;height:160px;color:#ffffff" placeholder="Mockup: matriz esforço x impacto" />
+            <div style="padding:22px 24px;display:flex;flex-direction:column;gap:8px">
+              <span style="font-size:12px;font-weight:900;letter-spacing:0.14em;color:#c8a96e">BÔNUS 02</span>
+              <h3 style="margin:0;font-size:19px;font-weight:600;line-height:1.3;color:#ffffff">Matriz esforço x impacto</h3>
+              <p style="margin:0;font-size:14px;line-height:1.6;color:rgba(255,255,255,0.66)">Para decidir o que fazer primeiro e o que ignorar.</p>
+            </div>
+          </div>
+
+          <div style="background:#162d42;border:1px solid rgba(255,255,255,0.12);border-radius:8px;overflow:hidden;display:flex;flex-direction:column">
+            <ImageSlot id="ctd-bonus-3" shape="rect" style="width:100%;height:160px;color:#ffffff" placeholder="Mockup: modelos de bio" />
+            <div style="padding:22px 24px;display:flex;flex-direction:column;gap:8px">
+              <span style="font-size:12px;font-weight:900;letter-spacing:0.14em;color:#c8a96e">BÔNUS 03</span>
+              <h3 style="margin:0;font-size:19px;font-weight:600;line-height:1.3;color:#ffffff">Modelos de bio por segmento</h3>
+              <p style="margin:0;font-size:14px;line-height:1.6;color:rgba(255,255,255,0.66)">Copiar, adaptar ao seu negócio e colar.</p>
+            </div>
+          </div>
+
+          <div style="background:#162d42;border:1px solid rgba(255,255,255,0.12);border-radius:8px;overflow:hidden;display:flex;flex-direction:column">
+            <ImageSlot id="ctd-bonus-4" shape="rect" style="width:100%;height:160px;color:#ffffff" placeholder="Mockup: calendário editorial" />
+            <div style="padding:22px 24px;display:flex;flex-direction:column;gap:8px">
+              <span style="font-size:12px;font-weight:900;letter-spacing:0.14em;color:#c8a96e">BÔNUS 04</span>
+              <h3 style="margin:0;font-size:19px;font-weight:600;line-height:1.3;color:#ffffff">Calendário editorial local</h3>
+              <p style="margin:0;font-size:14px;line-height:1.6;color:rgba(255,255,255,0.66)">O mês inteiro planejado sem depender de inspiração.</p>
+            </div>
+          </div>
+
+          <div style="background:#162d42;border:1px solid rgba(255,255,255,0.12);border-radius:8px;overflow:hidden;display:flex;flex-direction:column">
+            <ImageSlot id="ctd-bonus-5" shape="rect" style="width:100%;height:160px;color:#ffffff" placeholder="Mockup: respostas rápidas" />
+            <div style="padding:22px 24px;display:flex;flex-direction:column;gap:8px">
+              <span style="font-size:12px;font-weight:900;letter-spacing:0.14em;color:#c8a96e">BÔNUS 05</span>
+              <h3 style="margin:0;font-size:19px;font-weight:600;line-height:1.3;color:#ffffff">Pacote de respostas rápidas</h3>
+              <p style="margin:0;font-size:14px;line-height:1.6;color:rgba(255,255,255,0.66)">Mensagens de WhatsApp que não deixam o cliente esfriar.</p>
+            </div>
+          </div>
+
+          <div style="background:#162d42;border:1px solid rgba(255,255,255,0.12);border-radius:8px;overflow:hidden;display:flex;flex-direction:column">
+            <ImageSlot id="ctd-bonus-6" shape="rect" style="width:100%;height:160px;color:#ffffff" placeholder="Mockup: checklist Tabuleiro" />
+            <div style="padding:22px 24px;display:flex;flex-direction:column;gap:8px">
+              <span style="font-size:12px;font-weight:900;letter-spacing:0.14em;color:#c8a96e">BÔNUS 06</span>
+              <h3 style="margin:0;font-size:19px;font-weight:600;line-height:1.3;color:#ffffff">Checklist Tabuleiro Organizado</h3>
+              <p style="margin:0;font-size:14px;line-height:1.6;color:rgba(255,255,255,0.66)">Uma página para conferir se o básico está de pé.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section style="background:#f7f9fb;padding:88px 24px">
+      <div style="max-width:1000px;margin:0 auto">
+        <h2 style="margin:0;font-size:clamp(30px,3.6vw,46px);font-weight:700;line-height:1.1;color:#1d3e58;max-width:24ch">Tudo o que você recebe hoje</h2>
+
+        <div style="margin-top:44px;background:#ffffff;border:1px solid #d6dfe7;border-radius:8px;box-shadow:0 8px 32px rgba(17,34,51,0.12);overflow:hidden">
+          <div style="padding:34px 32px;border-bottom:1px solid #d6dfe7;display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:32px">
+            <div>
+              <p style="margin:0 0 10px;font-size:11px;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:#8398a8">Produto principal</p>
+              <h3 style="margin:0 0 16px;font-size:22px;font-weight:700;line-height:1.25;color:#1d3e58">Método Cliente Todo Dia</h3>
+              <ul style="margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:10px">
+                <li style="display:flex;gap:10px;font-size:15px;line-height:1.5;color:#2c3d4d"><span style="color:#c8a96e;flex:none">✓</span>Abrindo o Tabuleiro.</li>
+                <li style="display:flex;gap:10px;font-size:15px;line-height:1.5;color:#2c3d4d"><span style="color:#c8a96e;flex:none">✓</span>Dominando o Tabuleiro.</li>
+                <li style="display:flex;gap:10px;font-size:15px;line-height:1.5;color:#2c3d4d"><span style="color:#c8a96e;flex:none">✓</span>Movimentos de Ataque.</li>
+                <li style="display:flex;gap:10px;font-size:15px;line-height:1.5;color:#2c3d4d"><span style="color:#c8a96e;flex:none">✓</span>Cliente Todo Dia, integração do método.</li>
+              </ul>
+            </div>
+            <div>
+              <p style="margin:0 0 10px;font-size:11px;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:#8398a8">Materiais práticos inclusos</p>
+              <ul style="margin:0 0 22px;padding:0;list-style:none;display:flex;flex-direction:column;gap:10px">
+                <li style="display:flex;gap:10px;font-size:15px;line-height:1.5;color:#2c3d4d"><span style="color:#c8a96e;flex:none">✓</span>Checklists práticos.</li>
+                <li style="display:flex;gap:10px;font-size:15px;line-height:1.5;color:#2c3d4d"><span style="color:#c8a96e;flex:none">✓</span>Scripts de atendimento e indicação.</li>
+                <li style="display:flex;gap:10px;font-size:15px;line-height:1.5;color:#2c3d4d"><span style="color:#c8a96e;flex:none">✓</span>Guias de controle simples.</li>
+              </ul>
+              <p style="margin:0 0 10px;font-size:11px;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:#8398a8">6 bônus de execução</p>
+              <ul style="margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:10px">
+                <li style="display:flex;gap:10px;font-size:15px;line-height:1.5;color:#2c3d4d"><span style="color:#c8a96e;flex:none">✓</span>Reels locais, matriz esforço x impacto, bios.</li>
+                <li style="display:flex;gap:10px;font-size:15px;line-height:1.5;color:#2c3d4d"><span style="color:#c8a96e;flex:none">✓</span>Calendário editorial, respostas rápidas, checklist.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div style="padding:32px;background:#eef5f8;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:28px">
+            <div>
+              <p style="margin:0;font-size:15px;color:#5c7082"><span style="text-decoration:line-through">De R$ 199,90</span> · pagamento único</p>
+              <p style="margin:6px 0 0;font-size:44px;font-weight:900;line-height:1;color:#1d3e58">R$ 39,90</p>
+              <p style="margin:10px 0 0;font-size:14px;font-weight:600;color:#254e6d">Restam {spotsLeft} acessos neste lote</p>
+            </div>
+            <div style="display:flex;flex-direction:column;gap:12px;align-items:flex-start">
+              <a class="hover-navy press" href={checkoutUrl} style="background:#1d3e58;color:#ffffff;font-size:17px;font-weight:700;padding:18px 32px;border-radius:9999px;display:inline-flex;align-items:center;gap:10px">Quero receber o método e os bônus <span style="font-weight:400">→</span></a>
+              <p style="margin:0;font-size:13px;color:#5c7082">Pix · Cartão · Boleto — acesso vitalício</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section style="background:#ffffff;padding:88px 24px">
+      <div style="max-width:820px;margin:0 auto;display:flex;flex-direction:column;align-items:center;text-align:center;gap:20px">
+        <div style="width:96px;height:96px;border-radius:9999px;border:2px solid #c8a96e;display:flex;flex-direction:column;align-items:center;justify-content:center;flex:none">
+          <span style="font-size:32px;font-weight:900;line-height:1;color:#1d3e58">7</span>
+          <span style="font-size:10px;font-weight:600;letter-spacing:0.14em;color:#5c7082">DIAS</span>
+        </div>
+        <p style="margin:0;font-size:12px;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:#5c7082">Compra protegida</p>
+        <h2 style="margin:0;font-size:clamp(28px,3.2vw,42px);font-weight:700;line-height:1.1;color:#1d3e58">Garantia total de 7 dias</h2>
+        <p style="margin:0;font-size:18px;line-height:1.7;color:#3e5264;max-width:56ch">Leia o material. Aplique o que faz sentido. Se dentro de 7 dias você achar que isso não é útil para seu negócio, devolvemos 100% do seu dinheiro.</p>
+        <p style="margin:0;font-size:18px;font-weight:700;color:#1d3e58">Sem perguntas. Sem burocracia.</p>
+        <a class="hover-gold press" href={checkoutUrl} style="margin-top:10px;background:#c8a96e;color:#112233;font-size:17px;font-weight:700;padding:18px 32px;border-radius:9999px;display:inline-flex;align-items:center;gap:10px">Quero acessar com garantia de 7 dias <span style="font-weight:400">→</span></a>
+      </div>
+    </section>
+
+    <section style="background:#f7f9fb;padding:88px 24px">
+      <div style="max-width:820px;margin:0 auto">
+        <p style="margin:0 0 14px;font-size:12px;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:#5c7082">Respostas diretas</p>
+        <h2 style="margin:0 0 40px;font-size:clamp(30px,3.6vw,46px);font-weight:700;line-height:1.1;color:#1d3e58">Dúvidas frequentes</h2>
+
+        <div style="display:flex;flex-direction:column;gap:12px">
+
+          <details style="background:#ffffff;border:1px solid #d6dfe7;border-radius:8px;padding:22px 26px">
+            <summary style="cursor:pointer;font-size:18px;font-weight:600;line-height:1.4;color:#1d3e58;list-style:none;display:flex;justify-content:space-between;gap:16px">“Já tentei marketing antes e não funcionou.” <span style="color:#c8a96e;font-weight:400;flex:none">+</span></summary>
+            <p style="margin:16px 0 0;font-size:16px;line-height:1.7;color:#3e5264">Porque provavelmente você fez ações soltas, sem estrutura. No método Cliente Todo Dia criamos uma metodologia passo a passo, começando do básico e avançando degrau por degrau até o domínio do marketing que funciona e traz resultados reais.</p>
+          </details>
+
+          <details style="background:#ffffff;border:1px solid #d6dfe7;border-radius:8px;padding:22px 26px">
+            <summary style="cursor:pointer;font-size:18px;font-weight:600;line-height:1.4;color:#1d3e58;list-style:none;display:flex;justify-content:space-between;gap:16px">“Não tenho tempo.” <span style="color:#c8a96e;font-weight:400;flex:none">+</span></summary>
+            <p style="margin:16px 0 0;font-size:16px;line-height:1.7;color:#3e5264">O método foi feito para ser direto ao ponto, buscando sempre o resultado. Ele foi pensado justamente para aqueles que não têm tempo a perder e que precisam se desdobrar na administração do negócio. Por isso, o que você vai encontrar é uma metodologia baseada no feijão com arroz que trás resultado. Nada de ideias mirabolantes e complexas, ensinamos o que todo empreendedor deveria saber de modo simples e direto.</p>
+          </details>
+
+          <details style="background:#ffffff;border:1px solid #d6dfe7;border-radius:8px;padding:22px 26px">
+            <summary style="cursor:pointer;font-size:18px;font-weight:600;line-height:1.4;color:#1d3e58;list-style:none;display:flex;justify-content:space-between;gap:16px">“Isso funciona para meu tipo de negócio?” <span style="color:#c8a96e;font-weight:400;flex:none">+</span></summary>
+            <p style="margin:16px 0 0;font-size:16px;line-height:1.7;color:#3e5264">Funciona para qualquer negócio local que dependa de demanda recorrente. O impacto gerado têm muito mais relação com quem executa do que qual nicho é trabalhado. Possuindo um negócio físico e seguindo o passo a passo, temos certeza de que o resultado será visivelmente claro.</p>
+          </details>
+
+          <details style="background:#ffffff;border:1px solid #d6dfe7;border-radius:8px;padding:22px 26px">
+            <summary style="cursor:pointer;font-size:18px;font-weight:600;line-height:1.4;color:#1d3e58;list-style:none;display:flex;justify-content:space-between;gap:16px">“Não tenho muita verba disponível para marketing.” <span style="color:#c8a96e;font-weight:400;flex:none">+</span></summary>
+            <p style="margin:16px 0 0;font-size:16px;line-height:1.7;color:#3e5264">A grande maioria das ações não depende de investimento financeiro e sim de planejamento e ação. Usaremos verba apenas para acelerar os resultados, mas até chegar nesse momento iremos te ensinar uma série de ações para atrair mais clientes e construir bases sólidas para o seu negócio crescer.</p>
+          </details>
+
+          <details style="background:#ffffff;border:1px solid #d6dfe7;border-radius:8px;padding:22px 26px">
+            <summary style="cursor:pointer;font-size:18px;font-weight:600;line-height:1.4;color:#1d3e58;list-style:none;display:flex;justify-content:space-between;gap:16px">“Mas ebook funciona mesmo?” <span style="color:#c8a96e;font-weight:400;flex:none">+</span></summary>
+            <p style="margin:16px 0 0;font-size:16px;line-height:1.7;color:#3e5264">Funciona quando o conteúdo é prático, a lógica é simples e o foco é execução real. Esse material existe justamente porque empresários não têm tempo, cursos longos não são aplicados e mentorias não escalam para todos. Aqui é manual de campo, não curso acadêmico.</p>
+          </details>
+
+        </div>
+      </div>
+    </section>
+
+    <section style="background:#112233;padding:92px 24px">
+      <div style="max-width:1100px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:56px;align-items:center">
+        <div>
+          <p style="margin:0 0 14px;font-size:12px;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:#82aec5">Comece com o próximo movimento</p>
+          <h2 style="margin:0;font-size:clamp(30px,3.8vw,50px);font-weight:900;line-height:1.05;letter-spacing:-0.01em;color:#ffffff">Mais fluxo. Mais caixa. Menos estresse.</h2>
+          <p style="margin:24px 0 0;font-size:17px;line-height:1.7;color:rgba(255,255,255,0.8);max-width:52ch">Se você quer clientes todos os dias, previsibilidade de caixa, menos estresse e mais respeito como empresário, então o <strong style="font-weight:700;color:#ffffff">Cliente Todo Dia — Mais Fluxo, Mais Caixa</strong> foi feito para você.</p>
+
+          <div style="margin-top:32px;display:flex;align-items:baseline;flex-wrap:wrap;gap:12px">
+            <span style="font-size:16px;color:#82aec5;text-decoration:line-through">R$ 199,90</span>
+            <span style="font-size:44px;font-weight:900;line-height:1;color:#ffffff">R$ 39,90</span>
+            <span style="font-size:15px;color:#82aec5">pagamento único</span>
+          </div>
+          <p style="margin:12px 0 0;font-size:14px;font-weight:600;color:#c8a96e">Restam {spotsLeft} acessos neste lote promocional</p>
+
+          <a class="hover-gold press" href={checkoutUrl} style="margin-top:26px;background:#c8a96e;color:#112233;font-size:18px;font-weight:700;padding:19px 34px;border-radius:9999px;box-shadow:0 8px 32px rgba(200,169,110,0.28);display:inline-flex;align-items:center;gap:10px">Quero acessar agora por R$ 39,90 <span style="font-weight:400">→</span></a>
+
+          <div style="margin-top:22px;display:flex;align-items:center;flex-wrap:wrap;gap:10px">
+            <span style="display:inline-flex;align-items:center;gap:7px;border:1px solid rgba(255,255,255,0.22);border-radius:6px;padding:9px 12px;font-size:11px;font-weight:700;letter-spacing:0.08em;color:rgba(255,255,255,0.85)">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="11" width="18" height="11" rx="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+              COMPRA SEGURA
+            </span>
+            <span style="display:inline-flex;align-items:center;justify-content:center;background:#ffffff;border-radius:6px;width:58px;height:38px" title="Pix">
+              <svg width="24" height="24" viewBox="0 0 32 32" aria-label="Pix" role="img"><g fill="#32BCAD"><path d="M24.6 20.9a3.3 3.3 0 0 1-2.34-.97l-3.38-3.38a1.28 1.28 0 0 0-1.77 0l-3.39 3.39a3.3 3.3 0 0 1-2.34.97h-.67l4.28 4.28a3.42 3.42 0 0 0 4.84 0l4.29-4.29h-.52z"></path><path d="M11.38 11.08c.88 0 1.72.35 2.34.97l3.39 3.39c.49.49 1.28.49 1.77 0l3.38-3.37a3.3 3.3 0 0 1 2.34-.97h.52l-4.29-4.29a3.42 3.42 0 0 0-4.84 0l-4.28 4.28h.67z"></path><path d="M27.36 13.58l-2.6-2.6a.5.5 0 0 1-.19.04h-1.5c-.6 0-1.19.25-1.62.67l-3.38 3.38a1.66 1.66 0 0 1-2.34 0l-3.39-3.39a2.3 2.3 0 0 0-1.62-.67h-1.84c-.07 0-.13-.02-.19-.04l-2.61 2.61a3.42 3.42 0 0 0 0 4.84l2.61 2.61c.06-.03.12-.04.19-.04h1.84c.61 0 1.19-.24 1.62-.67l3.39-3.39c.65-.64 1.7-.64 2.34 0l3.38 3.38c.43.43 1.01.67 1.62.67h1.5c.07 0 .13.02.19.04l2.6-2.6a3.42 3.42 0 0 0 0-4.84z"></path></g></svg>
+            </span>
+            <span style="display:inline-flex;align-items:center;justify-content:center;background:#ffffff;border-radius:6px;width:58px;height:38px" title="Visa">
+              <svg width="44" height="16" viewBox="0 0 48 16" aria-label="Visa" role="img"><text x="24" y="13" text-anchor="middle" font-family="'Sofia Pro',system-ui,sans-serif" font-size="14" font-weight="900" font-style="italic" letter-spacing="0.5" fill="#1434CB">VISA</text></svg>
+            </span>
+            <span style="display:inline-flex;align-items:center;justify-content:center;background:#ffffff;border-radius:6px;width:58px;height:38px" title="Mastercard">
+              <svg width="40" height="26" viewBox="0 0 40 26" aria-label="Mastercard" role="img"><circle cx="15" cy="13" r="9" fill="#EB001B"></circle><circle cx="25" cy="13" r="9" fill="#F79E1B"></circle><path d="M20 5.6a9 9 0 0 0 0 14.8 9 9 0 0 0 0-14.8z" fill="#FF5F00"></path></svg>
+            </span>
+            <span style="display:inline-flex;align-items:center;justify-content:center;background:#ffffff;border-radius:6px;width:58px;height:38px" title="Boleto">
+              <svg width="36" height="22" viewBox="0 0 36 22" aria-label="Boleto" role="img"><g fill="#112233"><rect x="2" y="3" width="2" height="16"></rect><rect x="6" y="3" width="1" height="16"></rect><rect x="9" y="3" width="3" height="16"></rect><rect x="14" y="3" width="1" height="16"></rect><rect x="17" y="3" width="2" height="16"></rect><rect x="21" y="3" width="1" height="16"></rect><rect x="24" y="3" width="3" height="16"></rect><rect x="29" y="3" width="1" height="16"></rect><rect x="32" y="3" width="2" height="16"></rect></g></svg>
+            </span>
+          </div>
+          <p style="margin:16px 0 0;font-size:13px;letter-spacing:0.08em;color:rgba(255,255,255,0.55)">Acesso vitalício · Garantia de 7 dias</p>
+        </div>
+
+        <div style="border-radius:16px;overflow:hidden;background:#162d42;box-shadow:0 16px 56px rgba(17,34,51,0.45)">
+          <Image src={fotoOferta} widths={[480, 800, 1200]} sizes="(max-width: 900px) 100vw, 540px" alt="Filipe Ramalho, autor do método Cliente Todo Dia" style="display:block;width:100%;height:auto;aspect-ratio:4/5;object-fit:cover;object-position:50% 12%" />
+        </div>
+      </div>
+    </section>
+
+    <footer style="background:#0c1a26;padding:48px 24px">
+      <div style="max-width:1100px;margin:0 auto;display:flex;flex-wrap:wrap;gap:24px;align-items:center;justify-content:space-between">
+        <div style="display:flex;align-items:baseline;gap:7px;color:#ffffff;font-size:20px">
+          <span style="font-weight:900">FI</span><span style="font-weight:300">Digital</span>
+        </div>
+        <p style="margin:0;font-size:14px;color:rgba(255,255,255,0.6)">Cliente Todo Dia — Mais Fluxo, Mais Caixa</p>
+        <p style="margin:0;font-size:13px;color:rgba(255,255,255,0.4)">Informações legais e dados do responsável: pendentes para publicação.</p>
+      </div>
+    </footer>
+
+    {showSticky && (<Fragment>
+    <div id="sticky" style="position:fixed;left:0;right:0;bottom:0;z-index:50;background:#112233;border-top:1px solid rgba(255,255,255,0.14);padding:12px 16px;align-items:center;justify-content:space-between;gap:12px;box-shadow:0 -8px 32px rgba(17,34,51,0.4)">
+      <div style="min-width:0">
+        <p style="margin:0;font-size:12px;color:#82aec5;text-decoration:line-through">R$ 199,90</p>
+        <p style="margin:0;font-size:20px;font-weight:900;line-height:1.1;color:#ffffff">R$ 39,90</p>
+      </div>
+      <a class="press" href={checkoutUrl} style="background:#c8a96e;color:#112233;font-size:15px;font-weight:700;padding:15px 22px;border-radius:9999px;white-space:nowrap;min-height:48px;display:inline-flex;align-items:center">Quero acessar agora →</a>
+    </div>
+    </Fragment>)}
+
+  </div>
+</Layout>
+
+<style is:global>
+  html { scroll-behavior: smooth; }
+  body { margin: 0; background: #112233; }
+  a { color: #c8a96e; text-decoration: none; }
+  a:hover { color: #dbbe8f; }
+  #hero {
+    display: grid;
+    gap: 0 56px;
+    grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+    grid-template-areas: "kicker media" "title media" "sub media" "body media" "pull media" "price media" "cta media" "trust media";
+    align-content: center;
+  }
+  #sticky { display: none; }
+  @media (max-width: 1100px) {
+    #xadrez { display: none; }
+  }
+  @media (max-width: 900px) {
+    #hero {
+      grid-template-columns: minmax(0, 1fr);
+      gap: 0;
+      grid-template-areas: "kicker" "title" "media" "sub" "body" "pull" "price" "cta" "trust";
+    }
+    #sticky { display: flex; }
+    #hero-media { margin: 28px 0 32px; }
+    body { padding-bottom: 96px; }
+  }
+
+  /* Estados de hover/clique dos botões (substituem style-hover/style-active) */
+  a.hover-gold:hover { background: #dbbe8f !important; color: #112233; }
+  a.hover-navy:hover { background: #254e6d !important; }
+  a.press:active { transform: scale(0.97) !important; }
+</style>
